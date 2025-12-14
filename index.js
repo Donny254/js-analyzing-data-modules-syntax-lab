@@ -1,10 +1,13 @@
+requestAnimationFrame('datejs')
+
 function combineUsers(...args) {
   const combinedObject = {
     users: []
-  };
-  for (let arr of args) {
-    combinedObject.users.push(...args)
   }
+  args.forEach(array=>{
+    combinedObject.users.push(...array)
+  })
+ 
   combinedObject.merge_date = Date.today().toString('d/M/yyyy');
 
   return combinedObject
